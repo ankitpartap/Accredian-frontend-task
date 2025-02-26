@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axiosInstance from "../../api/axiosInstance.js";
+import { toast } from "react-toastify";
 
 const ReferralModal = ({ isOpen, onClose }) => {
   const initialFormState = {
@@ -61,19 +62,21 @@ const ReferralModal = ({ isOpen, onClose }) => {
       try {
         console.log(formData);
         
-        console.log("Form Submitted Successfully");
-        setTimeout(() => {
-          handleClose(); // Reset form and close modal
-        }, 1000);
-        // await axiosInstance.post("/api/referral/submit", formData, {
-        //   headers: { "Content-Type": "application/json" },
-        // });
+        // console.log("Form Submitted Successfully");
+        // setTimeout(() => {
+        //   handleClose(); // Reset form and close modal
+        // }, 1000);
+        await axiosInstance.post("/referral/submit", formData, {
+          headers: { "Content-Type": "application/json" },
+        });
         console.log("Form Submitted Successfully");
 
         //this function is used to Reset form and close modal after successful submission
         handleClose();
+        toast.success("Refer Successful");
       } catch (err) {
         console.error("Error submitting form:", err);
+        toast.error("Couldn't send referal");
       }
     }
   };
