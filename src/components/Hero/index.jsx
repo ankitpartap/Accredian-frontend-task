@@ -15,7 +15,7 @@ const Hero = () => {
                 <h1 className='text-4xl md:text-7xl font-bold '>Let's Learn & Earn</h1>
                 <p className='mt-9 text-2xl  '>Get a chance to win up-to<br/>
                 <span className='text-primary px-2 text-4xl   md:text-5xl font-bold'>₹15,000</span></p>
-                <Button text="Refer Now" onBtnClick={() => setIsModalOpen(true)} blue={true} className="mt-7 text-1xl sm:items-start font-light "/>
+                <Button text="Refer Now" onBtnClick={() => setIsModalOpen(true)} blue={true} className="mt-7 px-7 py-3  text-lg sm:items-start font-light "/>
                 <ReferralModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
             </div>
 

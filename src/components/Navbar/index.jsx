@@ -20,7 +20,7 @@ const Navbar = () => {
             <a href="#" className="text-gray-700 hover:text-blue-600">Refer & Earn</a>
             {/* Refer Now Button */}
             <Button text="Login" blue={false}/>
-            <Button text="Refer Now" blue={true}/>
+            <Button text="Courses" blue={true}/>
             
           </div>
 
