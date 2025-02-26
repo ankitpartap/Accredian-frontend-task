@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@theme {
+    --color-mint-500: oklch(0.72 0.11 178);
+    --font-poppins: Poppins, sans-serif;
+    --color-primary: #1A73E8;
+    --color-primary-lite: #e8f1fd;
+
+}
+
+/* *{
+    background-color: var(--color-mint-500);
+} */
